@@ -1,13 +1,12 @@
 {
   "scripts": {
     "dev": "npm run server:dev",
-    "prod": "npm run lint && npm run build && npm run server:prod",
-    "build": "vite build",
-    "server:dev": "node ./server",
-    "server:prod": "cross-env NODE_ENV=production node ./server",
+    "vercel-build": "vite build",
+    "build": "echo 'I will never be called because the `vercel-build` script supersedes me'",
     "lint": "eslint . --max-warnings 0"
   },
   "dependencies": {
+    "@vercel/node": "^3.0.17",
     "@vitejs/plugin-react": "^4.0.4",
     "compression": "^1.7.4",
     "cross-env": "^7.0.3",
